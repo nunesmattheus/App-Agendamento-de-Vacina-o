@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h2>Selecione uma data</h2>
+        <form action="">
+            <div class="input-field">
+                <input type="date" name="date" id="date">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <select id="horario">
+                    <option value="06:00">06:00</option>
+                    <option value="06:30">06:30</option>
+                    <option value="07:00">07:00</option>
+                    <option value="07:30">07:00</option>
+                    <option value="08:00">08:00</option>
+                    <option value="08:30">08:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:30">09:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                </select>
+                <div class="underline"></div>
+            </div>
+
+            <button id="submit" type="submit">Continue</button>
+        </form>
+    </main>
+
+    <script src="./scripts/agendamento.js"></script>
+</body>
+</html>
