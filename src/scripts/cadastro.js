@@ -6,8 +6,30 @@ let cpf = document.getElementById('cpf')
 let idade = document.getElementById('idade')
 let sexo = document.getElementById('sexo')
 
+let usuario = {
+    nome: '',
+    email: '',
+    password: '',
+    cpf: '',
+    idade: '',
+    sexo: ''
+}
+
+const usuarioAtual = JSON.parse(window.localStorage.getItem('usuario'))
+
+function criaUsuario(){
+    window.localStorage.setItem('usuario', JSON.stringify([usuario]))
+}
+
 function enviaFormulario(event){
     event.preventDefault()     
+
+    usuario.nome = nome.value
+    usuario.email = email.value
+    usuario.password = password.value
+    usuario.cpf = cpf.value
+    usuario.idade = idade.value
+    usuario.sexo = sexo.value
 
     window.localStorage.setItem('nome', nome.value)
     window.localStorage.setItem('cpf', cpf.value)
@@ -17,7 +39,7 @@ function enviaFormulario(event){
     window.localStorage.setItem('password', password.value)
     
     if(password.value == passw.value){
-        window.location.href = '/login.html'
+        window.location.href = '/src/login.html'         
     }
     else{
         window.alert('As senhas não coincidem')

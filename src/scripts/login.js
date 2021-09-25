@@ -8,7 +8,7 @@ function autenticaSenha(event){
     let senha = window.localStorage.getItem('password')
 
     if(email1.value == email && senha1.value == senha){
-        window.location.href = '/tela_usuario.html'
+        window.location.href = '/src/perfil.html'
     }
     else{
         window.alert("Usuario ou senha incorretos")
